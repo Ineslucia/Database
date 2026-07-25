@@ -1,0 +1,16 @@
+# Database exports and local configuration
+*.bak
+*.log
+*.env
+.env.*
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.vs/
+.DS_Store
+Thumbs.db
+
+# Installers and archives
+*.msi
+*.zip
