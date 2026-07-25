@@ -1,0 +1,10 @@
+SELECT SUM(Population) FROM country;
+SELECT SUM(SurfaceArea) FROM country WHERE Continent = 'europr';
+SELECT name FROM country WHERE ABS(GNP - GNPOld) > 15000;
+SELECT COUNT(*) FROM countrylanguage WHERE IsOfficial = 'F';
+SELECT AVG(Percentage) AS GemiddeldPercentage FROM countrylanguage WHERE IsOfficial = 'T';
+SELECT MAX(Population) AS Grootste_Populatie FROM city;
+SELECT REPLACE(Job_Title, 'Manager', 'Director') AS Job_Titel FROM jobs;
+SELECT ROUND(AVG(Salary), 1) AS Gemiddeld_Loon FROM employees;
+SELECT * FROM employees WHERE year(HIRE_DATE) = 2019;
+SELECT * FROM employees WHERE length(EMAIL) < 10;

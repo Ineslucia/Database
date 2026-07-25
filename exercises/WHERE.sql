@@ -1,0 +1,11 @@
+USE worlddb;
+SELECT * FROM country;
+SELECT * FROM country WHERE continent = 'Oceania';
+SELECT * FROM city;
+SELECT * FROM city WHERE CountryCode = 'BEL';
+SELECT * FROM countrylanguage;
+SELECT CountryCode, Language FROM countrylanguage WHERE IsOfficial = 'T';
+SELECT Language FROM countrylanguage WHERE CountryCode = 'BEL' ORDER BY Percentage ASC;
+SELECT Name FROM country WHERE continent = 'Noth America' ORDER BY SurfaceArea DESC;
+SELECT Name FROM city WHERE Population < 1000;
+SELECT Name FROM country WHERE LifeExpectancy < 80;

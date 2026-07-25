@@ -1,0 +1,12 @@
+SELECT Language FROM counrtyLanguage GROUP BY Language;
+SELECT Region, count(*) FROM country GROUP BY Region;
+SELECT HeadOfState, COUNT(name) AS aantal_landen FROM country WHERE HeadOfState != '' GROUP BY HeadOfState;
+SELECT Continent, AVG(LifeExpectancy), MIN(LifeExpectancy), MAX(LifeExpectancy), count(code) FROM country GROUP BY Continent;
+SELECT Continent, COUNT(name) FROM country WHERE GNP > GNPOld GROUP BY Continent;
+SELECT COUNT(DISTINCT GovernmentForm) FROM country WHERE Continent = 'Europe';
+SELECT COUNT(code), GovernmentForm FROM country WHERE Continent = 'Europe' GROUP BY GovernmentForm;
+SELECT CountryCode, MAX(Population) AS GrootstePopulatie FROM city GROUP BY CountryCode;
+SELECT CountryCode, COUNT(DISTINCT District) AS UniekeDistricten FROM city GROUP BY CountryCode;
+SELECT LEFT(District, 1) AS EersteLetter, COUNT(*) AS AantalDistricten FROM city GROUP BY EersteLetter;
+SELECT CountryCode, COUNT(*) AS AantalSteden FROM city WHERE District LIKE '%a' GROUP BY CountryCode;
+SELECT CONCAT(Name, '-', District, ':', Population, 'inwoners') AS StadInfo FROM city GROUP BY Name, District, Population;
